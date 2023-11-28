@@ -1,0 +1,11 @@
+F:\MoonTorrent\TorrentCore\bin\Debug\net8.0\TorrentCore.deps.json
+F:\MoonTorrent\TorrentCore\bin\Debug\net8.0\TorrentCore.dll
+F:\MoonTorrent\TorrentCore\bin\Debug\net8.0\TorrentCore.pdb
+F:\MoonTorrent\TorrentCore\obj\Debug\net8.0\TorrentCore.GeneratedMSBuildEditorConfig.editorconfig
+F:\MoonTorrent\TorrentCore\obj\Debug\net8.0\TorrentCore.AssemblyInfoInputs.cache
+F:\MoonTorrent\TorrentCore\obj\Debug\net8.0\TorrentCore.AssemblyInfo.cs
+F:\MoonTorrent\TorrentCore\obj\Debug\net8.0\TorrentCore.csproj.CoreCompileInputs.cache
+F:\MoonTorrent\TorrentCore\obj\Debug\net8.0\TorrentCore.dll
+F:\MoonTorrent\TorrentCore\obj\Debug\net8.0\refint\TorrentCore.dll
+F:\MoonTorrent\TorrentCore\obj\Debug\net8.0\TorrentCore.pdb
+F:\MoonTorrent\TorrentCore\obj\Debug\net8.0\ref\TorrentCore.dll
