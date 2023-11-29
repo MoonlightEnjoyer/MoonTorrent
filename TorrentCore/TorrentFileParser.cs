@@ -3,9 +3,9 @@ using System.Text;
 
 namespace TorrentCore
 {
-    public class TorrentFileParser
+    public static class TorrentFileParser
     {
-        public string CalculateInfoHash(string fileName)
+        public static string CalculateInfoHash(string fileName)
         {
             using FileStream torrentFileStream = new FileStream(fileName, FileMode.Open);
             using BinaryReader binaryReader = new BinaryReader(torrentFileStream);

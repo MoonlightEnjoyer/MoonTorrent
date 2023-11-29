@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TorrentCore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc72982a698f8ff989badaf34c5ed0fcd41516b7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("TorrentCore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TorrentCore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
