@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HUWfGIfMLzuIgRA3fg+jHMqScx/qDGCgmaFAmktNIwtsPqktpOpGBUksK2rpQABR2UG9tO90iqTIZ8JXluYdxQ==",
+  "dgSpecHash": "5IpQUPfHxQxcWjwRd6/2CG6pnShs4HyusnpXfGN7JY9uLo60Cauk8Gvtbuach72M25ICcqB7xoRep7Ku0AtAAg==",
   "success": true,
-  "projectFilePath": "/home/dude/Desktop/MoonTorrent/TorrentCli/TorrentCli.csproj",
+  "projectFilePath": "F:\\MoonTorrent\\TorrentCli\\TorrentCli.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

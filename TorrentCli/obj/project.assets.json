@@ -1,37 +1,62 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "TorrentCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/TorrentCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TorrentCore.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "TorrentCore/1.0.0": {
+      "type": "project",
+      "path": "../TorrentCore/TorrentCore.csproj",
+      "msbuildProject": "../TorrentCore/TorrentCore.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "TorrentCore >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "/home/dude/.nuget/packages/": {}
+    "C:\\Users\\Dude\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/dude/Desktop/MoonTorrent/TorrentCli/TorrentCli.csproj",
+      "projectUniqueName": "F:\\MoonTorrent\\TorrentCli\\TorrentCli.csproj",
       "projectName": "TorrentCli",
-      "projectPath": "/home/dude/Desktop/MoonTorrent/TorrentCli/TorrentCli.csproj",
-      "packagesPath": "/home/dude/.nuget/packages/",
-      "outputPath": "/home/dude/Desktop/MoonTorrent/TorrentCli/obj/",
+      "projectPath": "F:\\MoonTorrent\\TorrentCli\\TorrentCli.csproj",
+      "packagesPath": "C:\\Users\\Dude\\.nuget\\packages\\",
+      "outputPath": "F:\\MoonTorrent\\TorrentCli\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/dude/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Dude\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "F:\\MoonTorrent\\TorrentCore\\TorrentCore.csproj": {
+              "projectPath": "F:\\MoonTorrent\\TorrentCore\\TorrentCore.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -59,7 +84,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -9,3 +9,4 @@ F:\MoonTorrent\TorrentCore\obj\Debug\net8.0\TorrentCore.dll
 F:\MoonTorrent\TorrentCore\obj\Debug\net8.0\refint\TorrentCore.dll
 F:\MoonTorrent\TorrentCore\obj\Debug\net8.0\TorrentCore.pdb
 F:\MoonTorrent\TorrentCore\obj\Debug\net8.0\ref\TorrentCore.dll
+F:\MoonTorrent\TorrentCore\obj\Debug\net8.0\TorrentCore.sourcelink.json

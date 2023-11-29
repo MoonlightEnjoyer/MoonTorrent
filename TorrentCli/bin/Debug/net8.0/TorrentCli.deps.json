@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "TorrentCli/1.0.0": {
+        "dependencies": {
+          "TorrentCore": "1.0.0"
+        },
         "runtime": {
           "TorrentCli.dll": {}
+        }
+      },
+      "TorrentCore/1.0.0": {
+        "runtime": {
+          "TorrentCore.dll": {}
         }
       }
     }
   },
   "libraries": {
     "TorrentCli/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TorrentCore/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

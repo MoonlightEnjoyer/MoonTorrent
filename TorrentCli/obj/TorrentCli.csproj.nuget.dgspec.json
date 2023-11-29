@@ -1,25 +1,86 @@
 {
   "format": 1,
   "restore": {
-    "/home/dude/Desktop/MoonTorrent/TorrentCli/TorrentCli.csproj": {}
+    "F:\\MoonTorrent\\TorrentCli\\TorrentCli.csproj": {}
   },
   "projects": {
-    "/home/dude/Desktop/MoonTorrent/TorrentCli/TorrentCli.csproj": {
+    "F:\\MoonTorrent\\TorrentCli\\TorrentCli.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/dude/Desktop/MoonTorrent/TorrentCli/TorrentCli.csproj",
+        "projectUniqueName": "F:\\MoonTorrent\\TorrentCli\\TorrentCli.csproj",
         "projectName": "TorrentCli",
-        "projectPath": "/home/dude/Desktop/MoonTorrent/TorrentCli/TorrentCli.csproj",
-        "packagesPath": "/home/dude/.nuget/packages/",
-        "outputPath": "/home/dude/Desktop/MoonTorrent/TorrentCli/obj/",
+        "projectPath": "F:\\MoonTorrent\\TorrentCli\\TorrentCli.csproj",
+        "packagesPath": "C:\\Users\\Dude\\.nuget\\packages\\",
+        "outputPath": "F:\\MoonTorrent\\TorrentCli\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/dude/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Dude\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "F:\\MoonTorrent\\TorrentCore\\TorrentCore.csproj": {
+                "projectPath": "F:\\MoonTorrent\\TorrentCore\\TorrentCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\MoonTorrent\\TorrentCore\\TorrentCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\MoonTorrent\\TorrentCore\\TorrentCore.csproj",
+        "projectName": "TorrentCore",
+        "projectPath": "F:\\MoonTorrent\\TorrentCore\\TorrentCore.csproj",
+        "packagesPath": "C:\\Users\\Dude\\.nuget\\packages\\",
+        "outputPath": "F:\\MoonTorrent\\TorrentCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Dude\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -53,7 +114,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
