@@ -1,5 +1,6 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace TorrentCore
 {
@@ -41,6 +42,28 @@ namespace TorrentCore
             res = Convert.ToHexString(hash);
 
             return res;
+        }
+
+        public static long GetTorrentSize(string fileName)
+        {
+            using StreamReader torrentStreamReader = new StreamReader(fileName);
+
+            string fileContent = torrentStreamReader.ReadToEnd();
+
+            fileContent = fileContent[(fileContent.IndexOf("files") + 5)..fileContent.IndexOf(":piece lengthi")];
+
+            long torrentSize = 0;
+
+            string rawLengthPattern = @"(lengthi\d+)";
+
+            string lengthValuePattern = @"\d+";
+
+            foreach (var match in Regex.Matches(fileContent, rawLengthPattern))
+            {
+                torrentSize += int.Parse(Regex.Match(match.ToString(), lengthValuePattern).ToString());
+            }
+
+            return torrentSize;
         }
     }
 }

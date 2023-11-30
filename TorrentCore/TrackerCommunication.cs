@@ -8,6 +8,9 @@ namespace TorrentCore
 {
     public class TrackerCommunication
     {
+        public void TrakerGetRequest(TorrentFile torrentFile)
+        {
 
+        }
     }
 }

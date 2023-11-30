@@ -46,3 +46,5 @@ F:\MoonTorrent\TorrentCli\obj\Debug\net8.0\TorrentCli.csproj.AssemblyReference.c
 F:\MoonTorrent\TorrentCli\obj\Debug\net8.0\TorrentCli.csproj.CopyComplete
 F:\MoonTorrent\TorrentCli\obj\Debug\net8.0\TorrentCli.genruntimeconfig.cache
 F:\MoonTorrent\TorrentCli\obj\Debug\net8.0\ref\TorrentCli.dll
+F:\MoonTorrent\TorrentCli\bin\Debug\net8.0\BencodeNET.dll
+F:\MoonTorrent\TorrentCli\bin\Debug\net8.0\System.IO.Pipelines.dll
