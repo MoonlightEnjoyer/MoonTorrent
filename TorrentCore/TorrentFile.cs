@@ -14,15 +14,15 @@ namespace TorrentCore
         private string UrlEncode()
         {
             string result = "";
-            foreach (char ch in this.InfoHash)
+            foreach (byte b in this.InfoHash)
             {
-                if (char.IsAsciiLetterOrDigit(ch) || ch == '-' || ch == '_' || ch == '.' || ch == '~')
+                if (char.IsAsciiLetterOrDigit((char)(b)) || b == '-' || b == '_' || b == '.' || b == '~')
                 {
-                    result += ch;
+                    result += (char)b;
                 }
                 else
                 {
-                    result += "%" + (byte)ch;
+                    result += "%" + Convert.ToHexString(new byte[] { b });
                 }
             }
 
@@ -33,8 +33,9 @@ namespace TorrentCore
         {
             this.Announce = "http://bt.t-ru.org/ann";
             this.InfoHash = TorrentFileParser.CalculateInfoHash(fileName);
+            this.InfoHashString = Convert.ToHexString(this.InfoHash);
             this.InfoHashUrlEncoded = this.UrlEncode();
-            this.PeerId = "QWERTYUIOPASDFGHJKLZ";
+            this.PeerId = "-PC0001-706887310628";
             this.Uploaded = 0;
             this.Downloaded = 0;
             this.Left = TorrentFileParser.GetTorrentSize(fileName);
@@ -44,7 +45,9 @@ namespace TorrentCore
 
         public string Announce {  get; set; }
 
-        public string InfoHash { get; set; }
+        public byte[] InfoHash { get; set; }
+
+        public string InfoHashString { get; set; }
 
         public string InfoHashUrlEncoded { get; set; }
 

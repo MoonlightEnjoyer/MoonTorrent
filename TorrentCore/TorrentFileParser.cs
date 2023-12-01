@@ -6,7 +6,7 @@ namespace TorrentCore
 {
     public static class TorrentFileParser
     {
-        public static string CalculateInfoHash(string fileName)
+        public static byte[] CalculateInfoHash(string fileName)
         {
             using FileStream torrentFileStream = new FileStream(fileName, FileMode.Open);
             using BinaryReader binaryReader = new BinaryReader(torrentFileStream);
@@ -39,9 +39,7 @@ namespace TorrentCore
             using var sha1 = SHA1.Create();
             var hash = sha1.ComputeHash(infoValue);
 
-            res = Convert.ToHexString(hash);
-
-            return res;
+            return hash;
         }
 
         public static long GetTorrentSize(string fileName)
