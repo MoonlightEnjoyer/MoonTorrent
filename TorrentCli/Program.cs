@@ -11,4 +11,13 @@ Console.WriteLine(torrentFile.Left);
 
 TrackerCommunication trackerCommunication = new TrackerCommunication();
 
-trackerCommunication.GetPeers(torrentFile);
+var peersList = trackerCommunication.GetPeers(torrentFile);
+
+HandshakePacket handshakePacket = new HandshakePacket(torrentFile.InfoHash, torrentFile.PeerId);
+
+PeerCommunication peerCommunication = new PeerCommunication();
+
+foreach (var peer in peersList)
+{
+    peerCommunication.SendHandshake(peer, handshakePacket);
+}

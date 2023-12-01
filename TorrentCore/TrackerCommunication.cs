@@ -7,12 +7,13 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Buffers.Binary;
+using System.ComponentModel;
 
 namespace TorrentCore
 {
     public class TrackerCommunication
     {
-        public void GetPeers(TorrentFile torrentFile)
+        public List<IPEndPoint> GetPeers(TorrentFile torrentFile)
         {
             string url = @$"{torrentFile.Announce}?info_hash={torrentFile.InfoHashUrlEncoded}&peer_id={torrentFile.PeerId}&uploaded=0&downloaded=0&left={torrentFile.Left}&port={torrentFile.Port}&compact=1";
             var userAgent = new ProductInfoHeaderValue("MoonTorrent", "0.1");
@@ -27,6 +28,10 @@ namespace TorrentCore
             byte[] pattern = Encoding.UTF8.GetBytes("peers");
 
             ushort peersDataStart = 0;
+
+            List<IPEndPoint> peersList = new List<IPEndPoint>(); 
+
+            
 
             for (ushort i = 0; i < peersData.Length; i++)
             {
@@ -68,8 +73,12 @@ namespace TorrentCore
                 port <<= 8;
                 port |= BinaryPrimitives.ReverseEndianness(peersData[i + 5]);
 
-                Console.WriteLine($"{ip[0]}.{ip[1]}.{ip[2]}.{ip[3]} : {port}");
+                //Console.WriteLine($"{ip[0]}.{ip[1]}.{ip[2]}.{ip[3]} : {port}");
+
+                peersList.Add(new IPEndPoint(new IPAddress(ip), port));
             }
+
+            return peersList;
         }
     }
 }
