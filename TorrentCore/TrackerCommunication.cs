@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using System.Buffers.Binary;
 
 namespace TorrentCore
 {
@@ -50,6 +51,25 @@ namespace TorrentCore
 
             Console.WriteLine(peersDataStart);
             Console.WriteLine(Encoding.UTF8.GetString(peersData));
+
+            for (int i = peersDataStart; i + 5 < peersData.Length; i += 6)
+            {
+                byte[] ip = new byte[4];
+
+                for (int j = i; j < i + 4; j++)
+                {
+                    ip[j - i] = BinaryPrimitives.ReverseEndianness(peersData[j]);
+                }
+
+                
+
+                ushort port = 0;
+                port |= BinaryPrimitives.ReverseEndianness(peersData[i + 4]);
+                port <<= 8;
+                port |= BinaryPrimitives.ReverseEndianness(peersData[i + 5]);
+
+                Console.WriteLine($"{ip[0]}.{ip[1]}.{ip[2]}.{ip[3]} : {port}");
+            }
         }
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TorrentCli")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3afa825a32e32d1991487259978cee392891a229")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f1df6e954f6b84be588beeaf47d4a6216745789f")]
 [assembly: System.Reflection.AssemblyProductAttribute("TorrentCli")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TorrentCli")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
