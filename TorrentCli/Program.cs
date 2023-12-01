@@ -4,10 +4,10 @@ string torrentFilePath = "F:\\MoonTorrent\\Red Hot Chili Peppers - Unlimited Lov
 
 TorrentFile torrentFile = new TorrentFile(torrentFilePath, 6889);
 
-Console.WriteLine(torrentFile.InfoHashString);
-Console.WriteLine(torrentFile.InfoHashUrlEncoded);
+//Console.WriteLine(torrentFile.InfoHashString);
+//Console.WriteLine(torrentFile.InfoHashUrlEncoded);
 
-Console.WriteLine(torrentFile.Left);
+//Console.WriteLine(torrentFile.Left);
 
 TrackerCommunication trackerCommunication = new TrackerCommunication();
 
