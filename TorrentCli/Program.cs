@@ -2,33 +2,33 @@
 
 string torrentFilePath = "F:\\MoonTorrent\\Red Hot Chili Peppers - Unlimited Love - 2022.torrent";
 
-//TorrentFile torrentFile = new TorrentFile(torrentFilePath, 6889);
+TorrentFile torrentFile = new TorrentFile(torrentFilePath, 6889);
 
-////Console.WriteLine(torrentFile.InfoHashString);
-////Console.WriteLine(torrentFile.InfoHashUrlEncoded);
+//Console.WriteLine(torrentFile.InfoHashString);
+//Console.WriteLine(torrentFile.InfoHashUrlEncoded);
 
-////Console.WriteLine(torrentFile.Left);
+//Console.WriteLine(torrentFile.Left);
 
-//TrackerCommunication trackerCommunication = new TrackerCommunication();
+TrackerCommunication trackerCommunication = new TrackerCommunication();
 
-//var peersList = trackerCommunication.GetPeers(torrentFile);
+var peersList = trackerCommunication.GetPeers(torrentFile);
 
-//HandshakePacket handshakePacket = new HandshakePacket(torrentFile.InfoHash, torrentFile.PeerId);
+HandshakePacket handshakePacket = new HandshakePacket(torrentFile.InfoHash, torrentFile.PeerId);
 
-//PeerCommunication peerCommunication = new PeerCommunication();
+PeerCommunication peerCommunication = new PeerCommunication();
 
-//foreach (var peer in peersList)
-//{
-//    peerCommunication.SendHandshake(peer, handshakePacket, torrentFile);
-//}
+foreach (var peer in peersList)
+{
+    peerCommunication.SendHandshake(peer, handshakePacket, torrentFile);
+}
 
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-PeerCommunication peerCommunication = new PeerCommunication();
+//PeerCommunication peerCommunication = new PeerCommunication();
 
-var files = TorrentFileParser.GetTorrentFilesInfo(torrentFilePath);
+//var files = TorrentFileParser.GetTorrentFilesInfo(torrentFilePath);
 
-peerCommunication.ExtractFilesFromRaw(files);
+//peerCommunication.ExtractFilesFromRaw(files);
 
 //peerCommunication.FindRepeats();
