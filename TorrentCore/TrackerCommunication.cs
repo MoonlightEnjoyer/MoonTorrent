@@ -54,8 +54,8 @@ namespace TorrentCore
                 }
             }
 
-            Console.WriteLine(peersDataStart);
-            Console.WriteLine(Encoding.UTF8.GetString(peersData));
+            //Console.WriteLine(peersDataStart);
+            //Console.WriteLine(Encoding.UTF8.GetString(peersData));
 
             for (int i = peersDataStart; i + 5 < peersData.Length; i += 6)
             {

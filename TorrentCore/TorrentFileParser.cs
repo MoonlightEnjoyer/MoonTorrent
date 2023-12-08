@@ -42,7 +42,8 @@ namespace TorrentCore
             return hash;
         }
 
-        public static long GetTorrentSize(string fileName)
+
+        public static ulong GetTorrentSize(string fileName)
         {
             using StreamReader torrentStreamReader = new StreamReader(fileName);
 
@@ -50,7 +51,7 @@ namespace TorrentCore
 
             fileContent = fileContent[(fileContent.IndexOf("files") + 5)..fileContent.IndexOf(":piece lengthi")];
 
-            long torrentSize = 0;
+            ulong torrentSize = 0;
 
             string rawLengthPattern = @"(lengthi\d+)";
 
@@ -58,10 +59,74 @@ namespace TorrentCore
 
             foreach (var match in Regex.Matches(fileContent, rawLengthPattern))
             {
-                torrentSize += int.Parse(Regex.Match(match.ToString(), lengthValuePattern).ToString());
+                torrentSize += uint.Parse(Regex.Match(match.ToString(), lengthValuePattern).ToString());
             }
 
             return torrentSize;
+        }
+
+        public static List<FileInfo> GetTorrentFilesInfo(string fileName)
+        {
+            List<FileInfo> files = new List<FileInfo>();
+
+            using StreamReader torrentStreamReader = new StreamReader(fileName);
+
+            string fileContent = torrentStreamReader.ReadToEnd();
+
+            fileContent = fileContent[(fileContent.IndexOf("files") + 5)..fileContent.IndexOf(":piece lengthi")];
+
+            ulong torrentSize = 0;
+
+            string rawLengthPattern = @"(lengthi\d+e\d+:pathl\d+:[\w\d\.\-\s']+ee\w\d+:)";
+
+            string lengthValuePattern = @"\d+";
+
+            string fileNamePattern = @"pathl\d+.+";
+
+            int startPos = 0;
+
+            while (true)
+            {
+                startPos = fileContent.IndexOf("lengthi", startPos);
+                if (startPos == -1)
+                {
+                    break;
+                }
+
+                var endPos = fileContent.IndexOf("lengthi", startPos + 1);
+
+                if (endPos == -1)
+                {
+                    endPos = fileContent.IndexOf("eee4:", startPos + 1);
+                }
+
+
+                if (endPos == -1)
+                {
+                    break;
+                }
+
+                string rawInfo = fileContent[startPos..endPos];
+
+                int lengthStart = 7;
+                int lengthEnd = rawInfo.IndexOf("e4");
+
+                int size = int.Parse(rawInfo[lengthStart..lengthEnd]);
+
+                int nameLength = int.Parse(Regex.Match(rawInfo[(lengthEnd + 3)..], @"\d+").ToString());
+
+                int nameStart = rawInfo.IndexOf(":", lengthEnd + 3) + 1;
+
+                string name = Encoding.UTF8.GetString(Encoding.UTF8.GetBytes(rawInfo)[nameStart..(nameStart + nameLength)]);
+
+                startPos = endPos;
+
+
+                files.Add(new FileInfo { Name = name, Size = size });
+                Console.WriteLine($"{name} : {size}");
+            }
+
+            return files;
         }
     }
 }
